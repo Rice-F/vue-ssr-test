@@ -1,30 +1,14 @@
 <template>
   <div class="container">
+    <h5>这是index.vue</h5>
+    <!-- 导航链接 -->
     <div>
-      <logo />
-      <h1 class="title">
-        vue-ssr-test
-      </h1>
-      <h2 class="subtitle">
-        My delightful Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <nuxt-link to="/users">用户列表</nuxt-link>
+      <button @click="$router.push('/users/detail')">用户详情</button>
+      <button @click="$router.push({name: 'users-detail', query: { id: 1 }})">用户详情</button>
+      <button @click="$router.push({name: 'users-id', params: { id: 1 }})">id用户详情</button>
     </div>
+    
   </div>
 </template>
 
@@ -43,30 +27,14 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+button {
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
 }
 </style>
