@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>这里是全局嵌入的部分，不需要配置路由，但会在每个页面显示，可用于全局导航菜单</div>
     <nuxt />
   </div>
 </template>

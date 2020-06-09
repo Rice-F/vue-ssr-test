@@ -8,7 +8,6 @@
       <button @click="$router.push({name: 'users-detail', query: { id: 1 }})">用户详情</button>
       <button @click="$router.push({name: 'users-id', params: { id: 1 }})">id用户详情</button>
     </div>
-    
   </div>
 </template>
 

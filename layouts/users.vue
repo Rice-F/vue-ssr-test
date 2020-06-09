@@ -1,12 +1,13 @@
 <template>
   <div>
-    用户详情id：{{$route.query.id}}
+    <h1>用户相关布局页面</h1>
+    <nuxt />
   </div>
 </template>
 
 <script>
   export default {
-
+      
   }
 </script>
 
