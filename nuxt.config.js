@@ -47,6 +47,10 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    proxy: true
+  },
+  proxy: {
+    "/api/": "http://localhost:3001/"
   },
   /*
   ** Build configuration
