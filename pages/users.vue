@@ -2,12 +2,12 @@
   <div>
     <h5>用户导航</h5>
     <nuxt-child></nuxt-child>
-    <ul>
+    <!-- <ul>
       <li
         v-for="user in users"
         :key="user.id"
       >{{user.name}}</li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
